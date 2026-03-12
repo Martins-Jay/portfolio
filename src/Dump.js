@@ -30,27 +30,4 @@ body::before {
 
 
 
-    <div className="mode-wrap">
-            <div className="outer-wrap">
-              <div className="inner-wrap">
-
-              </div>
-            </div>
-          </div>
-
-
-  .mode-wrap {
-  position: absolute;
-  width: 1rem;
-  height: 3rem;
-
-  top: 5rem;
-}
-
-.outer-wrap {
-  background: var(--text);
-}
-
-.inner-wrap {
-  background: var(--bg);
-}
+  

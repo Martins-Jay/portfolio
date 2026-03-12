@@ -70,8 +70,17 @@ function Nav({ theme = 'dark' }) {
           </button>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile menu bar */}
         <div className={`menu ${isMenuOpen ? 'show-menu' : ''}`}>
+          {/* Mode toggle (mobile) */}
+          <div className="mode-wrap">
+            <div className="mode-icon-wrap">
+              <MoonIcon size={21} />
+              <SunIcon size={21} />
+            </div>
+          </div>
+
+          {/* Menu links */}
           <ul className="menu-list">
             {links.map((linkObj) => (
               <li>
@@ -81,6 +90,25 @@ function Nav({ theme = 'dark' }) {
               </li>
             ))}
           </ul>
+
+          {/* View or download CV */}
+          <div className="cv-wrap">
+            <div className="view-cv-icon">
+              <ReadCvIcon size={21} />{' '}
+              <a href="/cv/Nnaukwu_Martins_Frontend_Developer.pdf">
+                View my CV
+              </a>
+            </div>
+
+            <div className="demacator-line"></div>
+
+            <div className="download-cv-icon">
+              <DownloadIcon size={21} />{' '}
+              <a href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link">
+                Downlaod CV
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
