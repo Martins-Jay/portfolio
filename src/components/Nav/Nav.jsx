@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import GitIcon from '../../assets/icons/GitIcon';
 import MoonIcon from '../../assets/icons/MoonIcon';
 import SunIcon from '../../assets/icons/SunIcon';
@@ -8,7 +8,8 @@ import DownloadIcon from '../../assets/icons/DownloadIcon';
 import ReadCvIcon from '../../assets/icons/ReadCvIcon';
 
 function Nav({ theme = 'dark' }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const links = useMemo(
     () => [
@@ -20,6 +21,18 @@ function Nav({ theme = 'dark' }) {
     ],
     [],
   );
+
+  useEffect(function () {
+    console.log(menuRef.current);
+
+    function handleCloseMenu(e) {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsMenuOpen(false);
+      }
+    }
+
+    document.addEventListener('pointerdown', handleCloseMenu);
+  }, []);
 
   function handleMenuToggle() {
     setIsMenuOpen((prev) => !prev);
@@ -71,7 +84,7 @@ function Nav({ theme = 'dark' }) {
         </div>
 
         {/* Mobile menu bar */}
-        <div className={`menu ${isMenuOpen ? 'show-menu' : ''}`}>
+        <div className={`menu ${isMenuOpen ? 'show-menu' : ''}`} ref={menuRef}>
           {/* Mode toggle (mobile) */}
           <div className="mode-wrap">
             <div className="mode-icon-wrap">
