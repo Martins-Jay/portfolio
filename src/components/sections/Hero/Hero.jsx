@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import CodeIcon from '../../../assets/icons/CodeIcon';
 import LayoutIcon from '../../../assets/icons/LayoutIcon';
-import MyImage from '../../../assets/icons/MyImage.PNG';
 import ReactIcon from '../../../assets/icons/ReactIcon';
 
 import './hero.css';
 
 function Hero() {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
   return (
     <section className="section-container" id="top">
       <div className="hero-grid container">
@@ -23,9 +25,10 @@ function Hero() {
         </h1>
 
         <p className="hero-description">
-          I bring ideas to life by building responsive web interfaces. I focus
-          on using modern technologies and writing clean, maintainable code so
-          that every experience feels smooth, fast, and enjoyable for users.
+          I bring ideas to life by building responsive web interfaces. <br /> I
+          focus on using modern technologies and writing clean, maintainable
+          code so that every experience feels smooth, fast, and enjoyable for
+          users.
         </p>
 
         <div className="hero-actions">
@@ -43,27 +46,14 @@ function Hero() {
           </a>
         </div>
 
-        {/* <div className="socialRow" aria-label="Social links">
-          <a className="socialPill" href="#" aria-label="Twitter/X">
-            X
-          </a>
-          <a className="socialPill" href="#" aria-label="LinkedIn">
-            in
-          </a>
-          <a className="socialPill" href="#" aria-label="WhatsApp">
-            wa
-          </a>
-          <a className="socialPill" href="#" aria-label="GitHub">
-            gh
-          </a>
-        </div> */}
-
         <div className="hero-right" aria-hidden="false">
           <div className="my-hero-card">
             <img
-              className="hero-image"
-              src={MyImage}
+              className={`hero-image ${imgLoaded ? 'loaded' : ''}`}
+              src="/images/my-image.png"
               alt="My professional headshot reference"
+              onLoad={() => setImgLoaded(true)}
+              fetchPriority="high"
             />
 
             <div className="my-info-data">

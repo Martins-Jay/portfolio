@@ -4,7 +4,7 @@ import './projectRow.css';
 
 function ProjectRow({ projectObj }) {
   return (
-    <div className="work-card word-card-with-preview reveal">
+    <div className="work-card word-card-with-preview">
       <div className="project-images-wrapper">
         <ProjectImages projectImg={projectObj.images} />
       </div>
@@ -12,6 +12,8 @@ function ProjectRow({ projectObj }) {
       <div className="work-body">
         <div className="work-content">
           <div className="logo-initials">{projectObj.logoInitials}</div>
+
+          <div className="left-line-bar"></div>
         </div>
 
         <div className="project-details-wrpper">
@@ -21,7 +23,9 @@ function ProjectRow({ projectObj }) {
             <p className="muted-subtitle">{projectObj.subtitle}</p>
           ) : null}
 
-          <p className="muted-description">{projectObj.description}</p>
+          <p className="muted-description" style={{ whiteSpace: 'pre-line' }}>
+            {projectObj.description}
+          </p>
 
           <div className="tags-wrapper">
             {projectObj.tags.map((tag) => (
@@ -50,7 +54,7 @@ function ProjectRow({ projectObj }) {
 
         <a href={projectObj.links.live} target="blank" rel="morefferer">
           <button className="btn primary len1" type="button">
-            Visit Project
+            Visit website
           </button>
         </a>
       </div>

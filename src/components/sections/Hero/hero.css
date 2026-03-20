@@ -77,29 +77,43 @@
   width: 100%;
   margin: 0 auto;
 }
+
 .my-hero-card {
   margin-top: 2rem;
   border: 1px solid var(--border-muted);
   border-radius: 1.5rem;
+  overflow: hidden;
 }
 
 .hero-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 1.2 / 1.4;
-  object-position: 50% -50%;
+  aspect-ratio: 1.2 / 1.33;
+  object-position: 50% -10%;
   object-fit: cover;
   background: radial-gradient(
     circle,
     color-mix(in srgb, var(--accent) 20%, transparent),
     transparent 80%
   );
+
+  filter: blur(10px);
+  transform: scale(0.97);
+
+  transition:
+    filter 0.8s ease,
+    transform 0.8 ease;
+}
+
+.hero-image.loaded {
+  filter: blur(0);
+  transform: scale(1);
 }
 
 .my-info-data {
-    display: flex;
+  display: flex;
   flex-direction: column;
-  margin: 0.5rem 1rem 2rem;
+  margin: 1.2rem 1rem 2rem;
   gap: 0.8rem;
 }
 
