@@ -10,7 +10,7 @@ function ProjectImages({ projectImg, title = 'Project preview' }) {
               className="project-preview-image"
               src={src}
               alt={``}
-              style={{ borderRadius: '1rem' }}
+              style={{ borderRadius: '1.5rem 1.5rem 0 0' }}
             />
           </div>
         ))}

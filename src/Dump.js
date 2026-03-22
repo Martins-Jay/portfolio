@@ -1,33 +1,60 @@
-/* body {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-}
+// function ProjectRow({ projectObj }) {
+//   return (
+//     <div className="work-card word-card-with-preview">
+//       <div className="project-images-wrapper">
+//         <ProjectImages projectImg={projectObj.images} />
+//       </div>
 
-body::before {
-  content: '';
-  position: absolute;
-  inset: -50%;
+//       <div className="work-body">
+//         <div className="work-content">
+//           <div className="logo-initials">{projectObj.logoInitials}</div>
 
-  background: radial-gradient(
-    circle at 50% 100%,
-    rgba(48, 124, 217, 0.25),
-    transparent 60%
-  );
+//           <div className="left-line-bar"></div>
+//         </div>
 
-  animation: lightMove 3s linear infinite;
-}
+//         <div className="project-details-wrpper">
+//           <p className="project-title">{projectObj.title}</p>
 
-@keyframes lightMove {
-  0% {
-    transform: translateY(40%);
-  }
-  100% {
-    transform: translateY(-40%);
-  }
-} */
+//           {projectObj.subtitle ? (
+//             <p className="muted-subtitle">{projectObj.subtitle}</p>
+//           ) : null}
 
+//           <p className="muted-description" style={{ whiteSpace: 'pre-line' }}>
+//             {projectObj.description}
+//           </p>
 
+//           <div className="tags-wrapper">
+//             {projectObj.tags.map((tag) => (
+//               <span key={tag} className="tag-pill">
+//                 {tag}
+//               </span>
+//             ))}
+//           </div>
 
+//           <div className="stack-section">
+//             <div className="stack-label">Skill stack used:</div>
 
+//             <div className="stack-wrapper">
+//               {projectObj.stack.map((stack) => (
+//                 <span className="stack-pill">{stack}</span>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="project-actions">
+//         <button className="btn secondary len1" type="button">
+//           Case study
+//         </button>
+
+//         <a href={projectObj.links.live} target="blank" rel="morefferer">
+//           <button className="btn primary len1" type="button">
+//             Visit website
+//           </button>
+//         </a>
+//       </div>
+//     </div>
+//   );
+// }
   

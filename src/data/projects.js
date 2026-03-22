@@ -4,11 +4,10 @@ export const projects = [
     logoInitials: 'MP',
     featured: false,
     title: 'MoodPad',
-    subtitle: 'Mood-Based Insights, Recommendations, and Tracking',
+    subtitle: 'Mood-Based Insights, Recomendation & Tracking',
     description: `MoodPad is a React web app that lets users track and reflect on their moods over time. It features an intuitive dashboard where users can add, edit, or delete mood entries and view their mood trends at a glance.\n 
     Built with reusable React components and CSS, MoodPad leverages localStorage to persist data and demonstrates proficiency in state management and component-driven architecture.`,
-    tags: ['React', 'UI', 'Dashboard'],
-    stack: ['React', 'CSS', 'Rest API'],
+    stack: ['React', 'CSS', 'REST API'],
     images: [
       // '/images/cryptospy/add-holdings-view.jpg',
       '/images/moodpad/moodpad-history-view.jpg',
@@ -43,12 +42,11 @@ export const projects = [
     featured: false,
     title: 'CryptoSpy',
     subtitle:
-      'Real-Time Cryptocurrency Tracking with Secure Portfolio Monitoring',
+      'Cryptocurrency Tracking with Secure Portfolio Monitoring',
 
     description: `CryptoSpy is a JavaScript web app that streams live cryptocurrency prices from Binance and lets users securely monitor holdings across external platforms without connecting accounts. It features a dynamic dashboard where users can add, edit, or remove assets and see real-time performance updates.\n 
-    Built with modular JavaScript, Firebase authentication, and Firestore, it demonstrates proficiency in API integration and handling asynchronous data.`,
+    Built with modular JavaScript, Firestore and Firebase authentication, it demonstrates proficiency in API integration and handling asynchronous data.`,
 
-    tags: ['JavaScript', 'WebSockets', 'Dashboard'],
     stack: ['Javascript', 'Tailwind CSS', 'Firebase'],
     images: [
       // '/images/moodpad/moodpad.jpg',

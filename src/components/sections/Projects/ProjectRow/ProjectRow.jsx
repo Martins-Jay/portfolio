@@ -10,53 +10,43 @@ function ProjectRow({ projectObj }) {
       </div>
 
       <div className="work-body">
-        <div className="work-content">
-          <div className="logo-initials">{projectObj.logoInitials}</div>
-
-          <div className="left-line-bar"></div>
-        </div>
-
         <div className="project-details-wrpper">
-          <p className="project-title">{projectObj.title}</p>
+          <div className="project-header-wrapper">
+            <div className="logo-initials">{projectObj.logoInitials}</div>
 
-          {projectObj.subtitle ? (
-            <p className="muted-subtitle">{projectObj.subtitle}</p>
-          ) : null}
+            <div className="header-content">
+              <p className="project-title">{projectObj.title}</p>
+
+              {projectObj.subtitle ? (
+                <p className="muted-subtitle">{projectObj.subtitle}</p>
+              ) : null}
+            </div>
+          </div>
 
           <p className="muted-description" style={{ whiteSpace: 'pre-line' }}>
             {projectObj.description}
           </p>
 
-          <div className="tags-wrapper">
-            {projectObj.tags.map((tag) => (
-              <span key={tag} className="tag-pill">
-                {tag}
-              </span>
-            ))}
-          </div>
-
           <div className="stack-section">
-            <div className="stack-label">Skill stack used:</div>
-
             <div className="stack-wrapper">
               {projectObj.stack.map((stack) => (
                 <span className="stack-pill">{stack}</span>
               ))}
             </div>
           </div>
+
+          <div className="project-actions">
+            <button className="btn secondary len1" type="button">
+              Case study
+            </button>
+
+            <a href={projectObj.links.live} target="blank" rel="morefferer">
+              <button className="btn primary len1" type="button">
+                Visit website
+              </button>
+            </a>
+          </div>
         </div>
-      </div>
-
-      <div className="project-actions">
-        <button className="btn secondary len1" type="button">
-          Case study
-        </button>
-
-        <a href={projectObj.links.live} target="blank" rel="morefferer">
-          <button className="btn primary len1" type="button">
-            Visit website
-          </button>
-        </a>
       </div>
     </div>
   );

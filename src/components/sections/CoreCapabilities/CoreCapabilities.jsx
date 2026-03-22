@@ -2,7 +2,7 @@ import SectionHead from '../../reusables/SectionHead';
 import CapabilityGroup from './CapabilityGroup/CapabilityGroup';
 import { capabilitiesData } from '../../../data/capabilitiesData';
 
-import './coreCapabilities.css'
+import './coreCapabilities.css';
 
 function CoreCapabilities() {
   return (
@@ -23,6 +23,29 @@ function CoreCapabilities() {
           ))}
 
           <div className="section-divider"></div>
+
+          <div className="bottom-container">
+            <div className="key-summary-container">
+              {capabilitiesData.map((capabilitiyObj) => (
+                <div className="key-wrapper">
+                  <div
+                    className="key-title-indicator"
+                    style={{
+                      background: capabilitiyObj.indicatorColor,
+                    }}
+                  ></div>
+
+                  <div className="key-title">{capabilitiyObj.title}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="open-to-work-wrapper">
+              <div className="available-indicator"></div>
+
+              <p className="otw-title">Open to work</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -30,4 +53,3 @@ function CoreCapabilities() {
 }
 
 export default CoreCapabilities;
-// <div className="tech-svg-wrapper">
