@@ -6,19 +6,12 @@ function ReactIcon({ size = 16 }) {
       height={size}
       viewBox="0 0 256 256"
       fill="none"
-      stroke="currentColor"
+      stroke="#61DAFB"
       strokeWidth="12"
     >
-      <circle cx="128" cy="128" r="12" fill="currentColor" />
+      <circle cx="128" cy="128" r="12" fill="#61DAFB" />
 
-      <ellipse
-        cx="128"
-        cy="128"
-        rx="90"
-        ry="36"
-        transform="rotate(0 128 128)"
-      />
-
+      <ellipse cx="128" cy="128" rx="90" ry="36" />
       <ellipse
         cx="128"
         cy="128"
@@ -26,7 +19,6 @@ function ReactIcon({ size = 16 }) {
         ry="36"
         transform="rotate(60 128 128)"
       />
-
       <ellipse
         cx="128"
         cy="128"

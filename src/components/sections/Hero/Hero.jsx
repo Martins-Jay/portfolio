@@ -17,7 +17,7 @@ function Hero() {
             Frontend Software Engineer
           </p>
 
-          <p class="hero-stack">JavaScript • React • Tailwind CSS</p>
+          <p className="hero-stack">JavaScript • React • Tailwind CSS</p>
         </div>
 
         <h1 className="hero-headline">

@@ -1,0 +1,70 @@
+.capabilities-card {
+  margin: 2.5rem 0;
+  padding: 1.3rem;
+  border: 1px solid var(--border-muted);
+  border-radius: 1rem;
+  background: var(--container-bg);
+}
+
+.capability-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.title-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.title-indicator {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.title-indicator::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 50%;
+  background: inherit;
+  filter: blur(3px);
+  top: 25%;
+  left: -0.7%;
+  opacity: 0.5;
+}
+
+.category-title {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+.pill-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.capability-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  /* background: #121d1a83; */
+  background: var(--softBg);
+  padding: 0.3rem 0.6rem;
+  border: 1.5px solid var(--border-muted);
+  border-radius: 0.6rem;
+}
+
+.tool-name {
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
