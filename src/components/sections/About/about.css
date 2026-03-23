@@ -70,8 +70,6 @@
   transform: translateX(40px);
 }
 
-/
-
 /* revealed state — both slide to their natural position */
 .about-stats.show .stat-card {
   opacity: 1;

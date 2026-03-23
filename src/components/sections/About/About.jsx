@@ -97,7 +97,6 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="experience-summary"></div>
       </div>
     </div>
   );
