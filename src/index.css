@@ -14,7 +14,9 @@ html[data-theme='dark'] {
   --border-muted: rgba(163, 163, 163, 0.2);
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.72);
-  --accent: #2dd4bf; /* teal */
+   --availableBg: #1fbdb81b;
+  /* --accent: #2dd4bf; */
+  --accent: #22c55e; 
   --accent2: #60a5fa; /* soft blue */
   --blink: #368fd76d;
   --navBg: rgba(11, 18, 32, 0.7);
@@ -45,8 +47,9 @@ html[data-theme='light'] {
   --border-muted: rgba(8, 1, 1, 0.09);
   --text: rgba(15, 23, 42, 0.78);
   --muted: rgba(15, 23, 42, 0.67);
-  --accent: #0ea5e9; /* sky */
-  --accent2: #22c55e; /* green */
+  --availableBg: #00000016;
+  --accent: #22c55e; /* sky */
+  --accent2: #0ea5e9; /* green */
   --blink: #02030420;
   --navBg: rgba(219, 222, 232, 0.72);
   --cardBg: rgba(60, 169, 219, 0.07);
@@ -123,15 +126,11 @@ p {
   padding: 0.8rem 1rem;
   border-radius: 0.7rem;
   color: #000000;
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--accent) 62%, transparent),
-    color-mix(in srgb, var(--accent2) 48%, transparent)
-  );
+  background: var(--accent);
 }
 
 .btn.secondary {
-  font-weight: 800;
+  font-weight: 600;
   border: 1px solid var(--border);
   padding: 0.85rem 1rem;
   border-radius: 0.7rem;
@@ -156,7 +155,7 @@ p {
 .section-divider {
   width: 100%;
   height: 0.1rem;
-  /* margin: 1rem 0 2rem; */
+  margin: 0.5rem 0 0rem;
   background: linear-gradient(to right, transparent, var(--blink), transparent);
 }
 

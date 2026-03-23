@@ -105,7 +105,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1fbdb81b;
+  background: var(--availableBg);
   width: 7rem;
   padding: 0.4rem 0.5rem;
   /* border: 1px solid var(--border-muted); */

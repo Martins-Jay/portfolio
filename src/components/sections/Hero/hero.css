@@ -44,27 +44,6 @@
   line-height: 1.55;
 }
 
-.btn.primary {
-  font-weight: 800;
-  padding: 0.7rem 1rem;
-  border-radius: 0.7rem;
-  color: #000000;
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--accent) 62%, transparent),
-    color-mix(in srgb, var(--accent2) 48%, transparent)
-  );
-}
-
-.btn.secondary {
-  font-weight: 800;
-  border: 1px solid var(--border);
-  padding: 0.8rem 1rem;
-  border-radius: 0.7rem;
-  color: var(--text);
-  background: var(--softBg);
-}
-
 /* hero right */
 .hero-right {
   display: flex;
