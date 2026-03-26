@@ -1,56 +1,118 @@
 import { useState } from 'react';
+import { easeIn, easeOut, motion } from 'framer-motion';
+import { filter } from 'framer-motion/client';
+
 import CodeIcon from '../../../assets/icons/CodeIcon';
 import LayoutIcon from '../../../assets/icons/LayoutIcon';
 import ReactIcon from '../../../assets/icons/ReactIcon';
 
 import './hero.css';
 
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const bluredFadeUp = {
+  hidden: {
+    opacity: 0,
+    filter: 'blur(6px)',
+    y: 15,
+  },
+  show: {
+    opacity: 1,
+    filter: 'blur(0px)',
+    y: 0,
+    transition: {
+      duration: 0.3,
+      ease: easeIn,
+    },
+  },
+};
+
+const imageVariant = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 1.2,
+      ease: easeOut,
+    },
+  },
+};
+
 function Hero() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
-    <section className="section-container" id="top">
+    <motion.section
+      id="top"
+      className="section-container"
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+    >
       <div className="hero-grid container">
-        <div className="hero-content">
+        <motion.div className="hero-content" variants={bluredFadeUp}>
           <p className="hero-title">
             <span className="micro-dot" />
             Frontend Software Engineer
           </p>
 
           <p className="hero-stack">JavaScript • React • Tailwind CSS</p>
-        </div>
+        </motion.div>
 
-        <h1 className="hero-headline">
-          Engineering Thoughtful Digital Experiences
-        </h1>
+        <motion.div variants={bluredFadeUp}>
+          <motion.h1 className="hero-headline" variants={bluredFadeUp}>
+            Engineering Thoughtful Digital Experiences
+          </motion.h1>
 
-        <p className="hero-description">
-          I bring ideas to life by building responsive web interfaces. <br /> I
-          focus on using modern technologies and writing clean, maintainable
-          code so that every experience feels smooth, fast, and enjoyable for
-          users.
-        </p>
+          <motion.p className="hero-description" variants={bluredFadeUp}>
+            I bring ideas to life by building responsive web interfaces. <br />{' '}
+            I focus on using modern technologies and writing clean, maintainable
+            code so that every experience feels smooth, fast, and enjoyable for
+            users.
+          </motion.p>
+        </motion.div>
 
-        <div className="hero-actions">
-          <a className="btn primary" href="#contact">
+        <motion.div className="hero-actions" variants={bluredFadeUp}>
+          <motion.a
+            className="btn primary"
+            href="#contact"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.85 }}
+            transition={{ type: 'spring', stiffness: 500 }}
+          >
             Get In Touch
-          </a>
+          </motion.a>
 
           <a
             className="btn secondary"
             href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link"
             target="_blank"
             rel="noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.85 }}
+            transition={{ type: 'spring', stiffness: 400 }}
           >
             Download CV
           </a>
-        </div>
+        </motion.div>
 
-        <div className="hero-right" aria-hidden="false">
+        <motion.div
+          className="hero-right"
+          variants={imageVariant}
+          aria-hidden="false"
+        >
           <div className="my-hero-card">
             <img
               className={`hero-image ${imgLoaded ? 'loaded' : ''}`}
-              src="/images/my-image.png"
+              src="/project_images/my-image.png"
               alt="My professional headshot reference"
               onLoad={() => setImgLoaded(true)}
               fetchPriority="high"
@@ -77,9 +139,9 @@ function Hero() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

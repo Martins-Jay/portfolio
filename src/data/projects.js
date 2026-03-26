@@ -10,7 +10,7 @@ export const projects = [
     stack: ['React', 'CSS', 'REST API'],
     images: [
       // '/images/cryptospy/add-holdings-view.jpg',
-      '/images/moodpad/moodpad-history-view.jpg',
+      '/project_images/moodpad/moodpad-history-view.jpg',
       // '/images/moodpad-images/moodpad-overview-view.jpg',
     ],
     links: {
@@ -51,7 +51,7 @@ export const projects = [
     images: [
       // '/images/moodpad/moodpad.jpg',
       // '/images/moodpad/moodpad-log-view.jpg',
-      '/images/cryptospy/cryptospy.jpg',
+      '/project_images/cryptospy/cryptospy.jpg',
       // '/images/moodpad/moodpad-overview-view.jpg',
     ],
     links: {

@@ -1,0 +1,44 @@
+.my-process-section {
+  margin: 1rem 0;
+  padding: 1rem 1.5rem 3.5rem;
+  border-top: 1px solid var(--border-muted);
+  /* border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem; */
+  background: var(--sectionBg);
+}
+
+/* Example CSS */
+.collabBannerImgWrapper {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.collabBannerImgWrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.collabBadge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+
+  background: var(--card);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.collabMini {
+  position: absolute;
+  bottom: 0.1rem;
+  left: 0.5rem;
+
+  background: var(--bg);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}

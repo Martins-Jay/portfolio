@@ -37,8 +37,6 @@ function About() {
   return (
     <div id="about" className="about-section container">
       <div>
-        {/* <div className="frontend-code">{`<Frontend Developer />`}</div> */}
-
         <SectionHead title="About Me" TagLevel="h2" />
 
         <div className="about-body">
@@ -46,14 +44,11 @@ function About() {
           <div className="about-left">
             <div className="about-text" ref={aboutRef}>
               <p>
-                Frontend developer with an{' '}
-                <span className="paint-text">Electrical Engineering</span>{' '}
-                background. i build responsive scalable interfaces with clean
-                code and{' '}
-                <span className="paint-text">
-                  user experience at the center of every decision
-                </span>
+                Frontend developer with an Electrical Engineering background. I
+                build responsive, scalable interfaces with clean code and user
+                experience at the center of every decision
               </p>
+
               <div className="hero-actions" style={{ margin: '1rem 0' }}>
                 <a className="btn primary" href="#contact">
                   Get In Touch
@@ -65,7 +60,7 @@ function About() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  My resume
+                  My Resume
                 </a>
               </div>
             </div>

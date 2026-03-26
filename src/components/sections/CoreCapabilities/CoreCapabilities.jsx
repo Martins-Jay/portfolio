@@ -11,7 +11,7 @@ function CoreCapabilities() {
         <SectionHead
           title="Core Capabilities"
           TagLevel="h2"
-          subtitle="Technologies, frameworks, and tools I use to design and build modern web applications."
+          subtitle="Technologies, frameworks, and tools I use to design and build."
         />
 
         <div className="capabilities-card">

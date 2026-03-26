@@ -6,12 +6,12 @@ import ProjectRow from './ProjectRow/ProjectRow';
 
 function ProjectList() {
   return (
-    <div className="section-container">
+    <div id='projects' className="section-container">
       <div className="project-list-wrap container">
         <SectionHead
           TagLevel="h2"
-          title="My Works"
-          subtitle="Explore my projects, view highlights, and read case studies with ease."
+          title="Projects"
+          subtitle="Explore my projects, view highlights, and read case studies."
         />
 
         <div className="work-list">

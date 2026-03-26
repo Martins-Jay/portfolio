@@ -15,9 +15,10 @@ function Nav({ theme = 'dark' }) {
   const links = useMemo(
     () => [
       { label: 'Home', href: '#top', id: 'top' },
+      { label: 'Core Capabilities', href: '#core-capabilities', id: 'core-capabilities' },
       { label: 'Projects', href: '#projects', id: 'projects' },
       { label: 'About me', href: '#about', id: 'about' },
-      { label: 'Services', href: '#services', id: 'services' },
+      { label: 'My Process', href: '#my-process', id: 'my-process' },
       { label: 'How I Work', href: '#collaboration', id: 'collaboration' },
     ],
     [],
@@ -128,7 +129,7 @@ function Nav({ theme = 'dark' }) {
               <DownloadIcon size={21} />
 
               <a href="https://drive.google.com/file/d/1420BUUvPp1ksRlgv1rJubHyXqfhzdBhL/view?usp=drive_link">
-                Downlaod CV
+                Downlaod CV 
               </a>
             </div>
           </div>
